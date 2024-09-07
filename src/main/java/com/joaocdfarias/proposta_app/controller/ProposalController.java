@@ -10,6 +10,9 @@ import com.joaocdfarias.proposta_app.dto.ProposalRequestDto;
 import com.joaocdfarias.proposta_app.dto.ProposalResponseDto;
 import com.joaocdfarias.proposta_app.service.ProposalService;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 @RestController
 @RequestMapping("/proposal")
 public class ProposalController {
