@@ -8,13 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.joaocdfarias.proposta_app.dto.ProposalRequestDto;
 import com.joaocdfarias.proposta_app.dto.ProposalResponseDto;
+import com.joaocdfarias.proposta_app.service.ProposalService;
 
 @RestController
 @RequestMapping("/proposal")
 public class ProposalController {
 
+  private ProposalService proposalService;
+
   @PostMapping
   public ResponseEntity<ProposalResponseDto> create(@RequestBody ProposalRequestDto requestDto) {
-    return null;
+    ProposalResponseDto response = proposalService.create(requestDto);
+    return ResponseEntity.ok(response);
   }
 }
