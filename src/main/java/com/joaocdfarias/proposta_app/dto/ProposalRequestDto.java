@@ -17,6 +17,8 @@ public class ProposalRequestDto {
 
   private String phone;
 
+  private String cpf;
+
   private Double income;
 
   private Double requestedAmount;
