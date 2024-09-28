@@ -1,5 +1,7 @@
 package com.joaocdfarias.proposta_app.mapper;
 
+import java.util.List;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
@@ -31,4 +33,5 @@ public interface ProposalMapper {
   @Mapping(target = "income", source = "user.income")
   ProposalResponseDto convertEntityToDto(Proposal proposal);
 
+  List<ProposalResponseDto> convertListEntityToListDto(Iterable<Proposal> proposals);
 }

@@ -1,5 +1,7 @@
 package com.joaocdfarias.proposta_app.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.joaocdfarias.proposta_app.dto.ProposalRequestDto;
@@ -21,5 +23,9 @@ public class ProposalService {
     proposalRepository.save(proposal);
 
     return ProposalMapper.INSTANCE.convertEntityToDto(proposal);
+  }
+
+  public List<ProposalResponseDto> getProposals() {
+    return ProposalMapper.INSTANCE.convertListEntityToListDto(proposalRepository.findAll());
   }
 }
