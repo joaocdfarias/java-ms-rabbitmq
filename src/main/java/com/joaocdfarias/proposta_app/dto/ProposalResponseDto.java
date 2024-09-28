@@ -23,7 +23,7 @@ public class ProposalResponseDto {
 
   private Double income;
 
-  private Double requestedAmount;
+  private String requestedAmount;
 
   private int paymentDeadline;
 
