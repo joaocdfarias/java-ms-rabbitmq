@@ -1,5 +1,7 @@
 package com.joaocdfarias.proposta_app.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -34,5 +36,6 @@ public class User {
   private Double income;
 
   @OneToOne(mappedBy = "user")
+  @JsonBackReference
   private Proposal proposal;
 }
