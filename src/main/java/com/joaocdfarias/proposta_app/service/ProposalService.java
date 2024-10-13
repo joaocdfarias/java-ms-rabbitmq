@@ -16,12 +16,12 @@ public class ProposalService {
 
   private ProposalRepository proposalRepository;
 
-  private NotificationService notificationService;
+  private NotificationRabbitService notificationService;
 
   private String exchange;
 
   public ProposalService(ProposalRepository proposalRepository,
-      NotificationService notificationService,
+      NotificationRabbitService notificationService,
       @Value("${rabbitmq.pendingproposal.exchange}") String exchange) {
     this.proposalRepository = proposalRepository;
     this.notificationService = notificationService;
